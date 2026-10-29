@@ -1,0 +1,70 @@
+% ACME: Amazon Research Awards, Fall 2026 (Automated Reasoning call).
+% Layout follows the official ARA proposal template: Calibri 11 pt, 1-inch
+% margins, four pages of main text, references in Appendix A.
+% Compiles with pdfLaTeX (carlito package) or XeLaTeX/LuaLaTeX (Carlito font);
+% Carlito is metrically identical to Calibri.
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[sfdefault,lf]{carlito}
+  \renewcommand*\familydefault{\sfdefault}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Carlito}
+  \setsansfont{Carlito}
+\fi
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[acronym,nomain]{glossaries}
+\makenoidxglossaries
+\input{glossary}
+
+% Section headings as in the template: bold, body size, no numbers.
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\linespread{1.0}
+\pagestyle{plain}
+
+% Comment macros (same as the other group projects).
+\newcommand{\yifeng}[1]{{\color{blue}#1}}
+\definecolor{nuzzopink}{RGB}{204,0,102}
+\newcommand{\nuzzo}[1]{{\color{nuzzopink}#1}}
+
+\newcommand{\sysname}{ACME\xspace}
+\newcommand{\chase}{CHASE\xspace}
+\newcommand{\thrust}[1]{\textbf{#1}}
+
+\begin{document}
+
+\input{doc/header}
+\input{doc/abstract}
+\input{doc/intro}
+\input{doc/methods}
+\input{doc/results}
+\input{doc/funds}
+\input{doc/additional}
+
+\clearpage
+\renewcommand{\refname}{Appendix A -- Reference}
+\renewcommand{\section}[2]{\par\textbf{#2}\par}
+{\small
+\bibliographystyle{acme}
+\bibliography{reference}
+}
+
+\end{document}
