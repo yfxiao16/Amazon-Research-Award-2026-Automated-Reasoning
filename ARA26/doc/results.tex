@@ -1,16 +1,15 @@
 \section{Expected results}
 
-{
-\begin{tabularx}{\linewidth}{@{}p{1.25cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{xltabular}{\linewidth}{@{}p{1.25cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
 \textbf{Months} & \textbf{Research result} & \textbf{Deliverable} \\
 \midrule
-1--3 & Decomposition protocol; sound GR(1) quotient approximations (Thrust 1) & Technical report; \chase release with MCP server and agent skill \\
-4--6 & Circular \gls{ag} rule for safety guarantees with a soundness proof; generalization of unrealizable cores (Thrust 1) & Open-source hardware flow with SymbiYosys on AWS; RTL benchmark with faulty variants \\
-7--9 & Contract library from context and traces; contract generation for delegation (Thrust 2); repair and certificate reuse (Thrust 3) & Hardware and multi-robot evaluation; conference paper \\
-10--12 & Choice between one agent and several (Thrust 2); contract coverage (Thrust 3) & Staged evaluation on long-horizon agent tasks; tool paper on \chase; presentation to Amazon teams \\
+\endhead
+1--3 & Quotient approximations (Task 1); layered feedback (Task 5) & Technical report; \chase release with MCP server and agent skill \\
+4--6 & Circular \gls{ag} rule with a soundness proof; learned constraints (Task 2) & Open-source hardware flow with SymbiYosys on AWS; RTL benchmark with faulty variants \\
+7--9 & Contract-based delegation and compaction (Task 3); repair and reuse (Task 6) & Hardware and multi-robot evaluation; conference paper \\
+10--12 & Contract-guided caching and joint optimization (Task 4); coverage (Task 6) & Agent evaluation; tool paper on \chase; talk to Amazon teams \\
 \bottomrule
-\end{tabularx}
-}
+\end{xltabular}
 
-Beyond the first year, we expect these results to extend to further decidable classes of architectures and to contracts with probabilistic guarantees. Contracts compiled into reward machines~\cite{icarte2018reward,camacho2019ltl} also give step-wise rewards that are checked formally, which we plan to use to fine-tune small open models. All code, benchmarks, and run traces will be released under open-source licenses.
+Beyond the first year, we expect these results to extend to further decidable classes of architectures, to contracts with probabilistic guarantees, and to design flows in which the three domains share certified components. All code, benchmarks, and run traces will be released under open-source licenses.
