@@ -4,12 +4,13 @@
 \toprule
 \textbf{Months} & \textbf{Research result} & \textbf{Deliverable} \\
 \midrule
+\endfirsthead
 \endhead
-1--3 & Contract models for the three layers; quotient approximations within GR(1) (Thrust 1) & Technical report; \chase release with MCP server and agent skill \\
-4--6 & Circular \gls{ag} rule with a soundness proof (Thrust 1); layered feedback and learned constraints (Thrust 3) & Open-source hardware flow with SymbiYosys on AWS; RTL benchmark with faulty variants \\
-7--9 & Iterative decomposition across layers; contract-based delegation (Thrust 2) & Hardware and multi-robot evaluation; conference paper \\
-10--12 & Joint optimization with inference cost (Thrust 2); certified library and reuse (Thrust 3) & Agent evaluation; tool paper on \chase; talk to Amazon teams \\
+1--3 & Decomposition agent with in-context formal feedback; GR(1) quotient approximations & \chase release with MCP server and agent skill; technical report \\
+4--6 & Library retrieval and learned constraints; decidable classes; circular \gls{ag} rule & RTL benchmark with faulty variants; theory paper (e.g., CAV) \\
+7--9 & Agentic decomposition search on hardware and robots; dataset of certified decompositions & Evaluation; open dataset; paper (e.g., FMCAD) \\
+10--12 & Proposer post-trained with fine-tuning and reinforcement learning on engine rewards & Open-weight proposer; paper (e.g., NeurIPS); tutorial; talks to Amazon \\
 \bottomrule
 \end{xltabular}
 
-Beyond the first year, we expect these results to extend to contracts with probabilistic guarantees and to design flows in which the three domains share certified components. All code, benchmarks, and run traces will be released under open-source licenses.
+Beyond the first year, the certified decompositions will grow into a training corpus for a decomposition model shared across domains; the benchmark, dataset, and tutorial will be released to the automated reasoning and machine learning communities, together with all code and run traces.
