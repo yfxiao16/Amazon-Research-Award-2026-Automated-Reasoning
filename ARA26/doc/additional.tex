@@ -6,7 +6,7 @@
 
 \textbf{3. Potential applications to Amazon.} (i) Verification of AWS processors and accelerators, where end-to-end properties of interconnects and memory subsystems beyond the capacity of direct model checking can be decomposed into module-level SVA contracts and reused when a block is resized. (ii) Design of distributed cloud services, where availability and consistency requirements can be decomposed into per-component timing contracts~\cite{xiao2026memocode}. (iii) Controller design for Amazon Robotics fleets, where missions can be decomposed into GR(1) contracts and synthesized into monitored controllers~\cite{xiao2026acies}.
 
-\textbf{4--5. Prior Amazon Research Awards.} No, and no Amazon funding or AWS credits in the past three years.
+\textbf{4--5. Prior Amazon Research Awards.} No\yifeng{, and no Amazon funding or AWS credits in the past three years}.
 
 \textbf{6. Assumptions and soundness.} A certified result is sound when (i) the back ends return correct verdicts; (ii) the translation into each back end preserves the semantics of the contracts; (iii) every composition step is acyclic or satisfies the side condition of the circular rule in Thrust~1; and (iv) the top-level specification is correct, which is why agent-written contracts are checked for consistency and vacuity. Bounded results never count as proofs, LLM outputs are never trusted, and quotient approximations only strengthen guarantees.
 
