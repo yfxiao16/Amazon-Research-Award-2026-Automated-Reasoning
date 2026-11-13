@@ -1,12 +1,12 @@
 \section{Additional information}
 
-\textbf{1. Application domain and analysis techniques.} Compositional design of distributed systems, multi-robot systems, and \zhiyu{integrated circuits}, using \gls{ag} contracts, mixed-integer linear programming (Gurobi), \gls{ltl} model checking (nuXmv), \gls{smt} reasoning, GR(1) synthesis (slugs), and hardware model checking (SymbiYosys, Jasper). It covers sound neurosymbolic reasoning, LLM--solver interfaces, auto-formalization of contracts, and verification of distributed systems, robots, and hardware.
+\textbf{1. Application domain and analysis techniques.} Compositional design of distributed systems, multi-robot systems, and {integrated circuits}, using \gls{ag} contracts, mixed-integer linear programming, \gls{ltl} model checking, \gls{smt} solving, GR(1) synthesis, and hardware model checking. Our frameworks  covers activities related to sound neurosymbolic reasoning, LLM--solver interfaces, auto-formalization of contracts, and verification of distributed systems, robots, and hardware.
 
 \textbf{2. Current applications.} \chase has been used for requirement formalization and validation of cyber-physical systems~\cite{nuzzo2018chase}, contract-based architecture exploration~\cite{xiao2024contrarc,xiao2026smcp}, traceability validation of heterogeneous requirement hierarchies~\cite{naik2024contract}, consistency and availability analysis of distributed systems with Lockheed Martin~\cite{xiao2026memocode}, and multi-robot controller synthesis~\cite{xiao2026acies}.
 
 \textbf{3. Potential applications to Amazon.} (i) Distributed cloud services, where end-to-end latency, availability, and consistency budgets can be decomposed into per-component timing contracts~\cite{xiao2026memocode}, complementing models in TLA+ or P. (ii) Amazon Robotics fleets, where warehouse missions can be decomposed into contracts for small groups of robots. (iii) AWS processors and accelerators, where end-to-end properties of interconnects and coherence controllers can be decomposed into module-level SVA contracts.
 
-\textbf{4--5. Prior Amazon Research Awards.} \yifeng{We did not receive any Amazon funding or AWS credits in the past three years}.
+\textbf{4--5. Prior Amazon Research Awards.} {We did not receive any Amazon funding or AWS credits in the past three years}.
 
 \textbf{6. Assumptions and soundness.} A certified result is sound when the back-end tools return correct verdicts, the translations into the back ends preserve the semantics of the contracts, the mappings between formalisms are conservative, and the top-level specification, which agents cannot edit, is correct. Every contract is checked for consistency and compatibility, so that no refinement holds trivially.
 

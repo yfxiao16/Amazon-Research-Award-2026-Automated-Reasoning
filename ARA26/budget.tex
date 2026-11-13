@@ -1,0 +1,53 @@
+% Standalone budget for the Amazon Research Awards, Fall 2026.
+% Typography and section headings follow main.tex.
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[sfdefault,lf]{carlito}
+  \renewcommand*\familydefault{\sfdefault}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Carlito}
+  \setsansfont{Carlito}
+\fi
+
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{titlesec}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\linespread{1.0}
+\pagestyle{plain}
+
+\begin{document}
+
+\input{doc/header}
+
+\section{Budget request}
+Amazon Research Awards, Fall 2026 (Automated Reasoning)
+
+\section{Cash funding}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+\toprule
+\textbf{Expected direct cost} & \textbf{Estimated amount (USD)} \\
+\midrule
+Support for one graduate student researcher for approximately nine months & \$77,000 \\
+Project travel for the graduate student researcher & \$3,000 \\
+\midrule
+\textbf{Total cash requested} & \textbf{\$80,000} \\
+\bottomrule
+\end{tabularx}
+
+The line-item amounts are estimates. Administrative overhead is excluded.
+
+\section{AWS Promotional Credits}
+The requested \$40,000 in AWS Promotional Credits will support agent inference on Amazon Bedrock, GPU-based post-training of the open-weight decomposition proposer and vision-language-action policies on Amazon SageMaker (Thrust~3), parallel verification runs on Amazon EC2, and storage of benchmarks and run traces in Amazon S3.
+
+\end{document}
